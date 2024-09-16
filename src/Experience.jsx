@@ -7,7 +7,6 @@ export default function Experience() {
 
   return (
     <>
-    Perf
       <SoftShadows intensity={ 1 } />
       <Suspense fallback  >
         <ScrollControls damping={1} maxSpeed={0.5} pages={10}>
