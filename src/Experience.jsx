@@ -1,7 +1,7 @@
 import { Environment, ScrollControls, Html, Scroll, SoftShadows } from '@react-three/drei'
 import Model from './Model'
 import { Suspense, useState } from 'react'
-import { EffectComposer, N8AO } from '@react-three/postprocessing'
+// import { EffectComposer, N8AO } from '@react-three/postprocessing'
 
 export default function Experience() {
 
@@ -19,9 +19,9 @@ export default function Experience() {
       >
         <orthographicCamera attach="shadow-camera" args={[-25, 25, -25, 25, 0.1, 100]} />
       </directionalLight>
-      <EffectComposer disableNormalPass >
+      {/* <EffectComposer disableNormalPass >
         <N8AO aoRadius={20} distanceFalloff={0.2} intensity={1.7} screenSpaceRadius quality="high" halfRes  />
-      </EffectComposer>
+      </EffectComposer> */}
       <Environment files="./env4.hdr" background />
 
       </>
