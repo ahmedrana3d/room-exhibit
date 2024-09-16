@@ -98,7 +98,7 @@ export default function CanvasContainer({ toggleOverlayOne, toggleOverlayTwo, to
 
     return (
         <>
-         <Canvas shadows >
+         <Canvas shadows gl={{logarithmicDepthBuffer : true,}}>
             <HtmlContent />
             <ToneMapping />
             <Experience handleWhiteButtonOne={handleWhiteButtonOne} />
