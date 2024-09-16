@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import { useThree } from "@react-three/fiber";
 import { useEffect, useState } from "react";
 import * as THREE from 'three';
+import { Perf } from "r3f-perf";
 
 function ToneMapping() {
     const { gl, scene } = useThree(({ gl, scene }) => ({ gl, scene }));
@@ -62,6 +63,9 @@ export default function CanvasContainer({ toggleOverlayOne, toggleOverlayTwo, to
     const { gl } = useThree();
     return (
       <>
+
+<Perf />
+
         <Html occlude distanceFactor={1} portal={{ current: gl.domElement.parentNode }} position={[-1.899, -1.5, -1.85]} >
           <div className="white-button" onClick={handleWhiteButtonOne} >
             <div className="white-button-inside" />
@@ -98,7 +102,11 @@ export default function CanvasContainer({ toggleOverlayOne, toggleOverlayTwo, to
 
     return (
         <>
+
+
+
          <Canvas shadows gl={{logarithmicDepthBuffer : true,}}>
+          <Perf/>
             <HtmlContent />
             <ToneMapping />
             <Experience handleWhiteButtonOne={handleWhiteButtonOne} />
